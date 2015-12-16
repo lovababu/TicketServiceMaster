@@ -1,0 +1,30 @@
+group 'com.walmart.ticketmaster'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //Testing frameworks.
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile "org.springframework:spring-test:3.2.10.RELEASE"
+
+    //Spring
+    compile 'org.springframework:spring-context:3.2.10.RELEASE'
+    compile 'org.springframework:spring-jdbc:3.2.10.RELEASE'
+    compile 'org.springframework:spring-aop:3.2.10.RELEASE'
+    compile 'org.springframework:spring-orm:3.2.10.RELEASE'
+    compile 'org.springframework:spring-tx:3.2.10.RELEASE'
+    compile 'org.springframework:spring-expression:3.2.10.RELEASE'
+    compile 'org.springframework:spring-context-support:3.2.10.RELEASE'
+
+    //Lombok, to eliminate boiler plate code.
+    compile 'org.projectlombok:lombok:1.16.4'
+
+    compile 'org.slf4j:slf4j-api:1.7.5'
+}
